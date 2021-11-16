@@ -1,7 +1,9 @@
 <template>
   <div>
-    <BaseFooButton  @add-itam="add" type="button" ><p>dsds</p></BaseFooButton>
-    <h1>Home page</h1>
+    <BaseFooButton title="submit" class="bg-green-500 text-white"  @add-itam="add" type="button" ></BaseFooButton>
+    <br/>
+      <BaseFooButton  title="Save" class="bg-red-500 text-white"  @add-itam="add" type="button" ></BaseFooButton>
+
     <NuxtLink to="/about">
       About (internal link that belongs to the Nuxt App)
     </NuxtLink>
