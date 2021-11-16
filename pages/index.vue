@@ -4,11 +4,22 @@
     <br/>
     {{text}}
 
-    <div class="p-3 bg-red-500 border-0">
+    <!-- <div class="p-3 bg-red-500 border-0">
         <AtomsLabel class="text-lg" value="Text input"></AtomsLabel>
+         <AtomsApplicationLogo></AtomsApplicationLogo>
        <AtomsInput class="m-3 " v-model:modelValue="text"  ></AtomsInput>
-    </div>
      
+       
+    </div> -->
+       <AtomsFormSection>
+
+
+            <template #form>
+  <AtomsLabel class="text-lg" value="Text input"></AtomsLabel>
+     <AtomsInput  v-model:modelValue="text"  ></AtomsInput>
+
+            </template>
+       </AtomsFormSection>
 
     <!-- <NuxtLink to="/about">
       About (internal link that belongs to the Nuxt App)
