@@ -1,30 +1,8 @@
 <template>
   <div>
-    <BaseFooButton title="submit" class="bg-green-500 text-white"  @add-itam="add" type="button" ></BaseFooButton>
-    <br/>
-    {{text}}
-
-    <!-- <div class="p-3 bg-red-500 border-0">
-        <AtomsLabel class="text-lg" value="Text input"></AtomsLabel>
-         <AtomsApplicationLogo></AtomsApplicationLogo>
-       <AtomsInput class="m-3 " v-model:modelValue="text"  ></AtomsInput>
-     
-       
-    </div> -->
-       <AtomsFormSection>
-
-
-            <template #form>
-  <AtomsLabel class="text-lg" value="Text input"></AtomsLabel>
-     <AtomsInput  v-model:modelValue="text"  ></AtomsInput>
-
-            </template>
-       </AtomsFormSection>
-
-    <!-- <NuxtLink to="/about">
-      About (internal link that belongs to the Nuxt App)
-    </NuxtLink>
-    <a  href="https://nuxtjs.org">External Link to another page</a> -->
+<p class="line-clamp-5">
+  Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis natus. Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas voluptas dolor cum. Rerum est quos quos id ut molestiae fugit.
+</p>
   </div>
 </template>
 
