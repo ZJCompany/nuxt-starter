@@ -1,0 +1,1 @@
+import{_ as s,c,o,e}from"./entry-c066cf72.mjs";const r={},t={class:"hidden sm:block"},a=e("div",{class:"py-8"},[e("div",{class:"border-t border-gray-200"})],-1),d=[a];function n(_,i){return o(),c("div",t,d)}var f=s(r,[["render",n]]);export{f as default};

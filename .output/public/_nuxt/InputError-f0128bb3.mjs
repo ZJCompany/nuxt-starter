@@ -1,0 +1,1 @@
+import{_ as s,d as t,b as a,v as o,c as r,e as n,t as c,o as p}from"./entry-c066cf72.mjs";const i=t({props:["message"]}),d={class:"text-sm text-red-600"};function m(e,_,f,l,u,v){return a((p(),r("div",null,[n("p",d,c(e.message),1)],512)),[[o,e.message]])}var h=s(i,[["render",m]]);export{h as default};
