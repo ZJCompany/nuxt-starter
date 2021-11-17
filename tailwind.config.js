@@ -7,6 +7,13 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        roboto: ['Roboto'],
+      },
+    },
+  },
   darkMode: true, // or 'media' or 'class'
   variants: {
     extend: {},
