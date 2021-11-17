@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <!-- <div>
         <button type="submit" class="block w-full px-4 py-2 text-sm leading-5 text-gray-700 text-left hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" v-if="as == 'button'">
             <slot></slot>
         </button>
@@ -11,16 +11,16 @@
         <Link :href="href" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" v-else>
             <slot></slot>
         </Link>
-    </div>
+    </div> -->
 </template>
 
 <script>
     import { defineComponent } from 'vue';
-    import { Link } from '@inertiajs/inertia-vue3';
+    // import { Link } from '@inertiajs/inertia-vue3';
 
     export default defineComponent({
         components: {
-            Link,
+            // Link,
         },
         props: ['href', 'as']
     })

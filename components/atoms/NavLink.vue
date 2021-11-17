@@ -1,12 +1,12 @@
 <template>
-    <Link :href="href" :class="classes">
+    <!-- <Link :href="href" :class="classes">
         <slot />
-    </Link>
+    </Link> -->
 </template>
 
 <script>
     import { defineComponent } from 'vue'
-    import { Link } from '@inertiajs/inertia-vue3';
+    // import { Link } from '@inertiajs/inertia-vue3';
 
     export default defineComponent({
         components: {
