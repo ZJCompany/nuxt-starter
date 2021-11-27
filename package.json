@@ -6,10 +6,11 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "@babel/helper-compilation-targets": "^7.16.3",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "autoprefixer": "^10.4.0",
     "nuxt3": "latest",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.1",
     "tailwindcss": "^2.2.19"
   },
   "dependencies": {
