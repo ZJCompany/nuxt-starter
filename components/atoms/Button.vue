@@ -11,10 +11,13 @@ import Input from './Input.vue'
 
     export default defineComponent({
     props: {
-        type: {
+        type: { 
             type: String,
             default: "submit",
         },
+
+        
+
     },
     components: { Input }
 })
