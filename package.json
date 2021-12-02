@@ -16,6 +16,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/line-clamp": "^0.2.2",
-    "@tailwindcss/typography": "^0.4.1"
+    "@tailwindcss/typography": "^0.4.1",
+    "vee-validate": "^3.4.14"
   }
 }

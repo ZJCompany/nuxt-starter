@@ -27,6 +27,7 @@
 </template>
 
 <script setup>
+
 console.log("sad");
 // import { ref } from 'vue'
 // import FormSection from '~~/components/atoms/FormSection.vue';
@@ -35,7 +36,7 @@ console.log("sad");
 // }
 // let text = ref('')
 
-let formData = ref({ username: 'default', password: '' })
+let formData = ref({ username: '', password: '' })
 
 // function changeText() {
 //   text.value = "jihadandzeyad";
