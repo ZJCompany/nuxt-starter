@@ -1,5 +1,6 @@
 <template>
 <div>
+  {{$t('hello')}}
  <NuxtLayout name="custom">
      <NuxtLink to="/about">
       About (internal link that belongs to the Nuxt App)

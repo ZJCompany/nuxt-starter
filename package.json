@@ -7,6 +7,7 @@
   },
   "devDependencies": {
     "@babel/helper-compilation-targets": "^7.16.3",
+    "@intlify/nuxt3": "^0.1.9",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "autoprefixer": "^10.4.0",
     "nuxt3": "latest",
@@ -17,8 +18,6 @@
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/line-clamp": "^0.2.2",
     "@tailwindcss/typography": "^0.4.1",
-    "vee-validate": "^3.4.14"
+    "vee-validate": "^4.5.6"
   }
 }
-
-
