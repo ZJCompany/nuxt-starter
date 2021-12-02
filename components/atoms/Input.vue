@@ -15,7 +15,8 @@
 import { defineProps, defineEmits } from 'vue'
 import { computed } from 'vue'
 
-const props = defineProps(['modelValue', 'type', 'rules'])
+// const props = defineProps(['modelValue', 'type', 'rules'])
+const props = defineProps(['modelValue', 'type'])
 const emit = defineEmits(['update:modelValue'])
 
 
@@ -31,20 +32,20 @@ const name = computed({
     }
 })
 
-if (props.rules.includes('phone')) {
-    watch(name, (currentType, prevType) => {
-        let max = props.rules.includes('max') ? props.rules.charAt(props.rules.indexOf('max') + 3) : 7;
-        let regx = new RegExp("^[7-9]\\d{" + (max - 1) + "}$");
+// if (props.rules.includes('phone')) {
+//     watch(name, (currentType, prevType) => {
+//         let max = props.rules.includes('max') ? props.rules.charAt(props.rules.indexOf('max') + 3) : 7;
+//         let regx = new RegExp("^[7-9]\\d{" + (max - 1) + "}$");
 
-        if (!regx.test(name.value)) {
-            if (!errors.value.includes("*A phone number should start with a number between 7 and 9 and must be " + (max) + " characters"))
-                errors.value.push("*A phone number should start with a number between 7 and 9 and must be " + (max) + " characters");
-        } else {
-            errors.value = [];
-        }
+//         if (!regx.test(name.value)) {
+//             if (!errors.value.includes("*A phone number should start with a number between 7 and 9 and must be " + (max) + " characters"))
+//                 errors.value.push("*A phone number should start with a number between 7 and 9 and must be " + (max) + " characters");
+//         } else {
+//             errors.value = [];
+//         }
 
 
-    })
-}
+//     })
+// }
 
 </script>

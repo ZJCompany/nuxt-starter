@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   intlify: {
     vueI18n: {
       // You can setting same `createI18n` options here !
-      locale: 'ar',
+      locale: 'en',
       messages: messages
     }
   },
