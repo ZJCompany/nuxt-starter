@@ -1,0 +1,1 @@
+import{_ as o,d as a,c as s,t as n,r,o as t}from"./entry-020a2e38.mjs";const l=a({props:["value"]}),c={class:"block font-medium text-sm text-gray-700"},p={key:0},d={key:1};function _(e,i,f,m,u,k){return t(),s("label",c,[e.value?(t(),s("span",p,n(e.value),1)):(t(),s("span",d,[r(e.$slots,"default")]))])}var $=o(l,[["render",_]]);export{$ as default};

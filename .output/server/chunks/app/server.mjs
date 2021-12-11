@@ -1,6 +1,663 @@
-import { v as vue_cjs_prod, s as serverRenderer, r as require$$0 } from '../index.mjs';
+import { g as getDefaultExportFromCjs, v as vue_cjs_prod, c as commonjsGlobal$1, s as serverRenderer, r as require$$0 } from '../index.mjs';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'unenv/runtime/mock/proxy';
 import 'stream';
+
+var vueLoading = {exports: {}};
+
+(function (module, exports) {
+(function webpackUniversalModuleDefinition(root, factory) {
+	module.exports = factory(vue_cjs_prod);
+})(commonjsGlobal$1, function(__WEBPACK_EXTERNAL_MODULE__982__) {
+return /******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 982:
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__982__;
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ src),
+  "useLoading": () => (/* reexport */ useLoading)
+});
+
+// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","amd":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_ = __webpack_require__(982);
+
+function removeElement(el) {
+  if (typeof el.remove !== 'undefined') {
+    el.remove();
+  } else {
+    var _el$parentNode;
+
+    (_el$parentNode = el.parentNode) === null || _el$parentNode === void 0 ? void 0 : _el$parentNode.removeChild(el);
+  }
+}
+function createComponent(component, props, parentContainer, slots = {}) {
+  const vNode = (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.h)(component, props, slots);
+  const container = document.createElement('div');
+  container.classList.add('vld-container');
+  parentContainer.appendChild(container);
+  (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.render)(vNode, container);
+  return vNode.component;
+}
+const MayBeHTMLElement = Object;
+
+const _hoisted_1 = {
+  class: "vld-icon"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createBlock)(external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.Transition, {
+    ref: "root",
+    name: _ctx.transition
+  }, {
+    default: (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.withCtx)(() => [(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.withDirectives)((0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("div", {
+      tabindex: "0",
+      class: ["vld-overlay is-active", {
+        'is-full-page': _ctx.isFullPage
+      }],
+      "aria-busy": _ctx.isActive,
+      "aria-label": "Loading",
+      style: {
+        zIndex: _ctx.zIndex
+      }
+    }, [(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("div", {
+      class: "vld-background",
+      onClick: _cache[1] || (_cache[1] = (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.withModifiers)((...args) => _ctx.cancel && _ctx.cancel(...args), ["prevent"])),
+      style: _ctx.bgStyle
+    }, null, 4), (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("div", _hoisted_1, [(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.renderSlot)(_ctx.$slots, "before"), (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.renderSlot)(_ctx.$slots, "default", {}, () => [((0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createBlock)((0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.resolveDynamicComponent)(_ctx.loader), {
+      color: _ctx.color,
+      width: _ctx.width,
+      height: _ctx.height
+    }, null, 8, ["color", "width", "height"]))]), (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.renderSlot)(_ctx.$slots, "after")])], 14, ["aria-busy"]), [[external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.vShow, _ctx.isActive]])]),
+    _: 3
+  }, 8, ["name"]);
+}
+/* harmony default export */ const trapFocusMixin = ({
+  mounted() {
+    if (this.enforceFocus) {
+      document.addEventListener('focusin', this.focusIn);
+    }
+  },
+
+  methods: {
+    /**
+     * Trap focus event
+     *
+     * @param event
+     */
+    focusIn(event) {
+      // Ignore when loading is not active
+      if (!this.isActive) return;
+      if ( // Event target is the loading div element itself
+      event.target === this.$refs.root || // Event target is inside the loading div
+      this.$refs.root.contains(event.target)) return; // Use container as parent when available otherwise use parent element when isFullPage is false
+
+      let parent = this.container ? this.container : this.isFullPage ? null : this.$refs.root.parentElement;
+
+      if ( // Always prevent when loading is full screen
+      this.isFullPage || // When a parent exist means loader is running inside a container
+      // When loading is NOT full screen and event target is inside the given container
+      parent && parent.contains(event.target)) {
+        event.preventDefault();
+        this.$refs.root.focus();
+      }
+    }
+
+  },
+
+  beforeUnmount() {
+    document.removeEventListener('focusin', this.focusIn);
+  }
+
+});
+
+
+const spinnervue_type_template_id_1ed0a811_hoisted_1 = /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("g", {
+  fill: "none",
+  "fill-rule": "evenodd"
+}, [/*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("g", {
+  transform: "translate(1 1)",
+  "stroke-width": "2"
+}, [/*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("circle", {
+  "stroke-opacity": ".25",
+  cx: "18",
+  cy: "18",
+  r: "18"
+}), /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("path", {
+  d: "M36 18c0-9.94-8.06-18-18-18"
+}, [/*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animateTransform", {
+  attributeName: "transform",
+  type: "rotate",
+  from: "0 18 18",
+  to: "360 18 18",
+  dur: "0.8s",
+  repeatCount: "indefinite"
+})])])], -1);
+
+function spinnervue_type_template_id_1ed0a811_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createBlock)("svg", {
+    viewBox: "0 0 38 38",
+    xmlns: "http://www.w3.org/2000/svg",
+    width: _ctx.width,
+    height: _ctx.height,
+    stroke: _ctx.color
+  }, [spinnervue_type_template_id_1ed0a811_hoisted_1], 8, ["width", "height", "stroke"]);
+}
+
+/* harmony default export */ const spinnervue_type_script_lang_js = ((0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.defineComponent)({
+  name: 'spinner',
+  props: {
+    color: {
+      type: String,
+      default: '#000'
+    },
+    height: {
+      type: Number,
+      default: 64
+    },
+    width: {
+      type: Number,
+      default: 64
+    }
+  }
+}));
+
+
+
+spinnervue_type_script_lang_js.render = spinnervue_type_template_id_1ed0a811_render;
+
+/* harmony default export */ const spinner = (spinnervue_type_script_lang_js);
+
+
+const dotsvue_type_template_id_6ecfb4ba_hoisted_1 = /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("circle", {
+  cx: "15",
+  cy: "15",
+  r: "15"
+}, [/*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "r",
+  from: "15",
+  to: "15",
+  begin: "0s",
+  dur: "0.8s",
+  values: "15;9;15",
+  calcMode: "linear",
+  repeatCount: "indefinite"
+}), /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "fill-opacity",
+  from: "1",
+  to: "1",
+  begin: "0s",
+  dur: "0.8s",
+  values: "1;.5;1",
+  calcMode: "linear",
+  repeatCount: "indefinite"
+})], -1);
+
+const _hoisted_2 = /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("circle", {
+  cx: "60",
+  cy: "15",
+  r: "9",
+  "fill-opacity": "0.3"
+}, [/*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "r",
+  from: "9",
+  to: "9",
+  begin: "0s",
+  dur: "0.8s",
+  values: "9;15;9",
+  calcMode: "linear",
+  repeatCount: "indefinite"
+}), /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "fill-opacity",
+  from: "0.5",
+  to: "0.5",
+  begin: "0s",
+  dur: "0.8s",
+  values: ".5;1;.5",
+  calcMode: "linear",
+  repeatCount: "indefinite"
+})], -1);
+
+const _hoisted_3 = /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("circle", {
+  cx: "105",
+  cy: "15",
+  r: "15"
+}, [/*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "r",
+  from: "15",
+  to: "15",
+  begin: "0s",
+  dur: "0.8s",
+  values: "15;9;15",
+  calcMode: "linear",
+  repeatCount: "indefinite"
+}), /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "fill-opacity",
+  from: "1",
+  to: "1",
+  begin: "0s",
+  dur: "0.8s",
+  values: "1;.5;1",
+  calcMode: "linear",
+  repeatCount: "indefinite"
+})], -1);
+
+function dotsvue_type_template_id_6ecfb4ba_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createBlock)("svg", {
+    viewBox: "0 0 120 30",
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: _ctx.color,
+    width: _ctx.width,
+    height: _ctx.height
+  }, [dotsvue_type_template_id_6ecfb4ba_hoisted_1, _hoisted_2, _hoisted_3], 8, ["fill", "width", "height"]);
+}
+
+/* harmony default export */ const dotsvue_type_script_lang_js = ((0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.defineComponent)({
+  name: 'dots',
+  props: {
+    color: {
+      type: String,
+      default: '#000'
+    },
+    height: {
+      type: Number,
+      default: 240
+    },
+    width: {
+      type: Number,
+      default: 60
+    }
+  }
+}));
+
+
+
+dotsvue_type_script_lang_js.render = dotsvue_type_template_id_6ecfb4ba_render;
+
+/* harmony default export */ const dots = (dotsvue_type_script_lang_js);
+
+
+const barsvue_type_template_id_f81ac1c0_hoisted_1 = /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("rect", {
+  x: "0",
+  y: "13",
+  width: "4",
+  height: "5"
+}, [/*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "height",
+  attributeType: "XML",
+  values: "5;21;5",
+  begin: "0s",
+  dur: "0.6s",
+  repeatCount: "indefinite"
+}), /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "y",
+  attributeType: "XML",
+  values: "13; 5; 13",
+  begin: "0s",
+  dur: "0.6s",
+  repeatCount: "indefinite"
+})], -1);
+
+const barsvue_type_template_id_f81ac1c0_hoisted_2 = /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("rect", {
+  x: "10",
+  y: "13",
+  width: "4",
+  height: "5"
+}, [/*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "height",
+  attributeType: "XML",
+  values: "5;21;5",
+  begin: "0.15s",
+  dur: "0.6s",
+  repeatCount: "indefinite"
+}), /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "y",
+  attributeType: "XML",
+  values: "13; 5; 13",
+  begin: "0.15s",
+  dur: "0.6s",
+  repeatCount: "indefinite"
+})], -1);
+
+const barsvue_type_template_id_f81ac1c0_hoisted_3 = /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("rect", {
+  x: "20",
+  y: "13",
+  width: "4",
+  height: "5"
+}, [/*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "height",
+  attributeType: "XML",
+  values: "5;21;5",
+  begin: "0.3s",
+  dur: "0.6s",
+  repeatCount: "indefinite"
+}), /*#__PURE__*/(0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createVNode)("animate", {
+  attributeName: "y",
+  attributeType: "XML",
+  values: "13; 5; 13",
+  begin: "0.3s",
+  dur: "0.6s",
+  repeatCount: "indefinite"
+})], -1);
+
+function barsvue_type_template_id_f81ac1c0_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createBlock)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 30 30",
+    height: _ctx.height,
+    width: _ctx.width,
+    fill: _ctx.color
+  }, [barsvue_type_template_id_f81ac1c0_hoisted_1, barsvue_type_template_id_f81ac1c0_hoisted_2, barsvue_type_template_id_f81ac1c0_hoisted_3], 8, ["height", "width", "fill"]);
+}
+
+/* harmony default export */ const barsvue_type_script_lang_js = ((0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.defineComponent)({
+  name: 'bars',
+  props: {
+    color: {
+      type: String,
+      default: '#000'
+    },
+    height: {
+      type: Number,
+      default: 40
+    },
+    width: {
+      type: Number,
+      default: 40
+    }
+  }
+}));
+
+
+
+barsvue_type_script_lang_js.render = barsvue_type_template_id_f81ac1c0_render;
+
+/* harmony default export */ const bars = (barsvue_type_script_lang_js);
+
+
+
+/* harmony default export */ const loaders = ({
+  Spinner: spinner,
+  Dots: dots,
+  Bars: bars
+});
+
+
+
+
+/* harmony default export */ const Componentvue_type_script_lang_js = ((0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.defineComponent)({
+  name: 'vue-loading',
+  mixins: [trapFocusMixin],
+  props: {
+    active: Boolean,
+    programmatic: Boolean,
+    container: [Object, Function, MayBeHTMLElement],
+    isFullPage: {
+      type: Boolean,
+      default: true
+    },
+    enforceFocus: {
+      type: Boolean,
+      default: true
+    },
+    lockScroll: {
+      type: Boolean,
+      default: false
+    },
+    transition: {
+      type: String,
+      default: 'fade'
+    },
+
+    /**
+     * Allow user to hide the loader
+     */
+    canCancel: Boolean,
+
+    /**
+     * Do something on cancel
+     */
+    onCancel: {
+      type: Function,
+      default: () => {}
+    },
+    color: String,
+    backgroundColor: String,
+    blur: {
+      type: String,
+      default: '2px'
+    },
+    opacity: Number,
+    width: Number,
+    height: Number,
+    zIndex: Number,
+    loader: {
+      type: String,
+      default: 'spinner'
+    }
+  },
+  emits: ['hide', 'update:active'],
+
+  data() {
+    return {
+      // Don't mutate the prop
+      isActive: this.active
+    };
+  },
+
+  components: loaders,
+
+  mounted() {
+    document.addEventListener('keyup', this.keyPress);
+  },
+
+  methods: {
+    /**
+     * Proxy to hide() method.
+     * Gets called by ESC button or when click outside
+     */
+    cancel() {
+      if (!this.canCancel || !this.isActive) return;
+      this.hide();
+      this.onCancel.apply(null, arguments);
+    },
+
+    /**
+     * Hide and destroy component if it's programmatic.
+     */
+    hide() {
+      this.$emit('hide');
+      this.$emit('update:active', false);
+
+      if (this.programmatic) {
+        this.isActive = false; // Timeout for the animation complete before destroying
+
+        setTimeout(() => {
+          const parent = this.$refs.root.parentElement; // unmount the component
+
+          (0, external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.render)(null, parent);
+          removeElement(parent);
+        }, 150);
+      }
+    },
+
+    disableScroll() {
+      if (this.isFullPage && this.lockScroll) {
+        document.body.classList.add('vld-shown');
+      }
+    },
+
+    enableScroll() {
+      if (this.isFullPage && this.lockScroll) {
+        document.body.classList.remove('vld-shown');
+      }
+    },
+
+    /**
+     * Key press event to hide on ESC.
+     *
+     * @param event
+     */
+    keyPress(event) {
+      // todo keyCode is deprecated
+      if (event.keyCode === 27) this.cancel();
+    }
+
+  },
+  watch: {
+    active(value) {
+      this.isActive = value;
+    },
+
+    isActive(value) {
+      if (value) {
+        this.disableScroll();
+      } else {
+        this.enableScroll();
+      }
+    }
+
+  },
+  computed: {
+    bgStyle() {
+      return {
+        background: this.backgroundColor,
+        opacity: this.opacity,
+        backdropFilter: `blur(${this.blur})`
+      };
+    }
+
+  },
+
+  beforeUnmount() {
+    document.removeEventListener('keyup', this.keyPress);
+  }
+
+}));
+
+
+
+Componentvue_type_script_lang_js.render = render;
+
+/* harmony default export */ const Component = (Componentvue_type_script_lang_js);
+
+
+function useLoading(globalProps = {}, globalSlots = {}) {
+  return {
+    show(props = globalProps, slots = globalSlots) {
+      const forceProps = {
+        programmatic: true,
+        lockScroll: true,
+        isFullPage: false,
+        active: true
+      };
+      const propsData = Object.assign({}, globalProps, props, forceProps);
+      let container = propsData.container;
+
+      if (!propsData.container) {
+        container = document.body;
+        propsData.isFullPage = true;
+      }
+
+      const mergedSlots = Object.assign({}, globalSlots, slots);
+      const instance = createComponent(Component, propsData, container, mergedSlots);
+      return {
+        hide: instance.ctx.hide
+      };
+    }
+
+  };
+}
+
+
+
+
+const Plugin = (app, props = {}, slots = {}) => {
+  const instance = useLoading(props, slots);
+  app.config.globalProperties.$loading = instance;
+  app.provide('$loading', instance);
+};
+
+Component.install = Plugin;
+/* harmony default export */ const src = (Component);
+
+})();
+
+__webpack_exports__ = __webpack_exports__.default;
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
+});
+}(vueLoading));
+
+const Loading = /*@__PURE__*/getDefaultExportFromCjs(vueLoading.exports);
 
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
@@ -443,7 +1100,7 @@ function normalizeStyle(value) {
     const res = {};
     for (let i = 0; i < value.length; i++) {
       const item = value[i];
-      const normalized = isString$1(item) ? parseStringStyle(item) : normalizeStyle(item);
+      const normalized = isString$2(item) ? parseStringStyle(item) : normalizeStyle(item);
       if (normalized) {
         for (const key in normalized) {
           res[key] = normalized[key];
@@ -451,7 +1108,7 @@ function normalizeStyle(value) {
       }
     }
     return res;
-  } else if (isString$1(value)) {
+  } else if (isString$2(value)) {
     return value;
   } else if (isObject$1(value)) {
     return value;
@@ -471,13 +1128,13 @@ function parseStringStyle(cssText) {
 }
 function stringifyStyle(styles) {
   let ret = "";
-  if (!styles || isString$1(styles)) {
+  if (!styles || isString$2(styles)) {
     return ret;
   }
   for (const key in styles) {
     const value = styles[key];
     const normalizedKey = key.startsWith(`--`) ? key : hyphenate(key);
-    if (isString$1(value) || typeof value === "number" && isNoUnitNumericStyleProp(normalizedKey)) {
+    if (isString$2(value) || typeof value === "number" && isNoUnitNumericStyleProp(normalizedKey)) {
       ret += `${normalizedKey}:${value};`;
     }
   }
@@ -485,7 +1142,7 @@ function stringifyStyle(styles) {
 }
 function normalizeClass(value) {
   let res = "";
-  if (isString$1(value)) {
+  if (isString$2(value)) {
     res = value;
   } else if (isArray$1(value)) {
     for (let i = 0; i < value.length; i++) {
@@ -507,7 +1164,7 @@ function normalizeProps(props) {
   if (!props)
     return null;
   let { class: klass, style } = props;
-  if (klass && !isString$1(klass)) {
+  if (klass && !isString$2(klass)) {
     props.class = normalizeClass(klass);
   }
   if (style) {
@@ -654,7 +1311,7 @@ const isMap = (val) => toTypeString$1(val) === "[object Map]";
 const isSet = (val) => toTypeString$1(val) === "[object Set]";
 const isDate$1 = (val) => val instanceof Date;
 const isFunction$1 = (val) => typeof val === "function";
-const isString$1 = (val) => typeof val === "string";
+const isString$2 = (val) => typeof val === "string";
 const isSymbol = (val) => typeof val === "symbol";
 const isObject$1 = (val) => val !== null && typeof val === "object";
 const isPromise = (val) => {
@@ -666,7 +1323,7 @@ const toRawType = (value) => {
   return toTypeString$1(value).slice(8, -1);
 };
 const isPlainObject$1 = (val) => toTypeString$1(val) === "[object Object]";
-const isIntegerKey = (key) => isString$1(key) && key !== "NaN" && key[0] !== "-" && "" + parseInt(key, 10) === key;
+const isIntegerKey = (key) => isString$2(key) && key !== "NaN" && key[0] !== "-" && "" + parseInt(key, 10) === key;
 const isReservedProp = /* @__PURE__ */ makeMap(",key,ref,onVnodeBeforeMount,onVnodeMounted,onVnodeBeforeUpdate,onVnodeUpdated,onVnodeBeforeUnmount,onVnodeUnmounted");
 const cacheStringFunction = (fn) => {
   const cache2 = Object.create(null);
@@ -743,7 +1400,7 @@ shared_cjs_prod.isSSRSafeAttrName = isSSRSafeAttrName;
 shared_cjs_prod.isSVGTag = isSVGTag;
 shared_cjs_prod.isSet = isSet;
 shared_cjs_prod.isSpecialBooleanAttr = isSpecialBooleanAttr;
-shared_cjs_prod.isString = isString$1;
+shared_cjs_prod.isString = isString$2;
 shared_cjs_prod.isSymbol = isSymbol;
 shared_cjs_prod.isVoidTag = isVoidTag;
 shared_cjs_prod.looseEqual = looseEqual;
@@ -1667,7 +2324,7 @@ function computed(getterOrOptions, debugOptions) {
   const cRef = new ComputedRefImpl(getter, setter, onlyGetter || !setter);
   return cRef;
 }
-var _a;
+var _a$1;
 const tick = Promise.resolve();
 const queue = [];
 let queued = false;
@@ -1690,7 +2347,7 @@ class DeferredComputedRefImpl {
     this.dep = void 0;
     this._dirty = true;
     this.__v_isRef = true;
-    this[_a] = true;
+    this[_a$1] = true;
     let compareTarget;
     let hasCompareTarget = false;
     let scheduled = false;
@@ -1732,7 +2389,7 @@ class DeferredComputedRefImpl {
     return toRaw(this)._get();
   }
 }
-_a = "__v_isReadonly";
+_a$1 = "__v_isReadonly";
 function deferredComputed(getter) {
   return new DeferredComputedRefImpl(getter);
 }
@@ -1797,7 +2454,7 @@ var vueRouter_cjs_prod = {};
     }
     return newParams;
   }
-  const noop = () => {
+  const noop2 = () => {
   };
   const TRAILING_SLASH_RE2 = /\/$/;
   const removeTrailingSlash = (path) => path.replace(TRAILING_SLASH_RE2, "");
@@ -2545,7 +3202,7 @@ var vueRouter_cjs_prod = {};
       }
       return originalMatcher ? () => {
         removeRoute(originalMatcher);
-      } : noop;
+      } : noop2;
     }
     function removeRoute(matcherRef) {
       if (isRouteName(matcherRef)) {
@@ -2899,7 +3556,7 @@ var vueRouter_cjs_prod = {};
     const isExactActive = vue.computed(() => activeRecordIndex.value > -1 && activeRecordIndex.value === currentRoute.matched.length - 1 && isSameRouteLocationParams(currentRoute.params, route2.value.params));
     function navigate(e = {}) {
       if (guardEvent(e)) {
-        return router[vue.unref(props.replace) ? "replace" : "push"](vue.unref(props.to)).catch(noop);
+        return router[vue.unref(props.replace) ? "replace" : "push"](vue.unref(props.to)).catch(noop2);
       }
       return Promise.resolve();
     }
@@ -3285,7 +3942,7 @@ var vueRouter_cjs_prod = {};
         const toLocation = resolve(to);
         const shouldRedirect = handleRedirectRecord(toLocation);
         if (shouldRedirect) {
-          pushWithRedirect(assign2(shouldRedirect, { replace: true }), toLocation).catch(noop);
+          pushWithRedirect(assign2(shouldRedirect, { replace: true }), toLocation).catch(noop2);
           return;
         }
         pendingLocation = toLocation;
@@ -3299,7 +3956,7 @@ var vueRouter_cjs_prod = {};
               if (isNavigationFailure(failure, 4 | 16) && !info.delta && info.type === NavigationType.pop) {
                 routerHistory.go(-1, false);
               }
-            }).catch(noop);
+            }).catch(noop2);
             return Promise.reject();
           }
           if (info.delta)
@@ -3315,7 +3972,7 @@ var vueRouter_cjs_prod = {};
             }
           }
           triggerAfterEach(toLocation, from, failure);
-        }).catch(noop);
+        }).catch(noop2);
       });
     }
     let readyHandlers = useCallbacks();
@@ -3834,8 +4491,8 @@ const removeUndefinedProps = (props) => Object.fromEntries(Object.entries(props)
 const setupForUseMeta = (metaFactory, renderChild) => (props, ctx) => {
   useMeta(() => metaFactory(__spreadValues(__spreadValues({}, removeUndefinedProps(props)), ctx.attrs), ctx));
   return () => {
-    var _a2, _b;
-    return renderChild ? (_b = (_a2 = ctx.slots).default) == null ? void 0 : _b.call(_a2) : null;
+    var _a2, _b2;
+    return renderChild ? (_b2 = (_a2 = ctx.slots).default) == null ? void 0 : _b2.call(_a2) : null;
   };
 };
 const globalProps = {
@@ -3946,8 +4603,8 @@ const Base = vue_cjs_prod.defineComponent({
 const Title = vue_cjs_prod.defineComponent({
   name: "Title",
   setup: setupForUseMeta((_, { slots }) => {
-    var _a2, _b;
-    const title = ((_b = (_a2 = slots.default()) == null ? void 0 : _a2[0]) == null ? void 0 : _b.children) || null;
+    var _a2, _b2;
+    const title = ((_b2 = (_a2 = slots.default()) == null ? void 0 : _a2[0]) == null ? void 0 : _b2.children) || null;
     return {
       title
     };
@@ -3979,9 +4636,9 @@ const Style = vue_cjs_prod.defineComponent({
     }
   }),
   setup: setupForUseMeta((props, { slots }) => {
-    var _a2, _b, _c;
+    var _a2, _b2, _c;
     const style = __spreadValues({}, props);
-    const textContent = (_c = (_b = (_a2 = slots.default) == null ? void 0 : _a2.call(slots)) == null ? void 0 : _b[0]) == null ? void 0 : _c.children;
+    const textContent = (_c = (_b2 = (_a2 = slots.default) == null ? void 0 : _a2.call(slots)) == null ? void 0 : _b2[0]) == null ? void 0 : _c.children;
     if (textContent) {
       style.children = textContent;
     }
@@ -4300,7 +4957,7 @@ function hasOwn(obj, key) {
 }
 const isArray = Array.isArray;
 const isFunction = (val) => typeof val === "function";
-const isString = (val) => typeof val === "string";
+const isString$1 = (val) => typeof val === "string";
 const isBoolean = (val) => typeof val === "boolean";
 const isObject = (val) => val !== null && typeof val === "object";
 const objectToString = Object.prototype.toString;
@@ -4588,8 +5245,8 @@ function normalizeNamed(pluralIndex, props) {
 function createMessageContext(options = {}) {
   const locale = options.locale;
   const pluralIndex = getPluralIndex(options);
-  const pluralRule = isObject(options.pluralRules) && isString(locale) && isFunction(options.pluralRules[locale]) ? options.pluralRules[locale] : pluralDefault;
-  const orgPluralRule = isObject(options.pluralRules) && isString(locale) && isFunction(options.pluralRules[locale]) ? pluralDefault : void 0;
+  const pluralRule = isObject(options.pluralRules) && isString$1(locale) && isFunction(options.pluralRules[locale]) ? options.pluralRules[locale] : pluralDefault;
+  const orgPluralRule = isObject(options.pluralRules) && isString$1(locale) && isFunction(options.pluralRules[locale]) ? pluralDefault : void 0;
   const plural = (messages2) => messages2[pluralRule(pluralIndex, messages2.length, orgPluralRule)];
   const _list = options.list || [];
   const list = (index2) => _list[index2];
@@ -4603,14 +5260,14 @@ function createMessageContext(options = {}) {
   const _modifier = (name) => options.modifiers ? options.modifiers[name] : DEFAULT_MODIFIER;
   const normalize = isPlainObject(options.processor) && isFunction(options.processor.normalize) ? options.processor.normalize : DEFAULT_NORMALIZE;
   const interpolate = isPlainObject(options.processor) && isFunction(options.processor.interpolate) ? options.processor.interpolate : DEFAULT_INTERPOLATE;
-  const type = isPlainObject(options.processor) && isString(options.processor.type) ? options.processor.type : DEFAULT_MESSAGE_DATA_TYPE;
+  const type = isPlainObject(options.processor) && isString$1(options.processor.type) ? options.processor.type : DEFAULT_MESSAGE_DATA_TYPE;
   const ctx = {
     ["list"]: list,
     ["named"]: named,
     ["plural"]: plural,
     ["linked"]: (key, modifier) => {
       const msg = message(key)(ctx);
-      return isString(modifier) ? _modifier(modifier)(msg) : msg;
+      return isString$1(modifier) ? _modifier(modifier)(msg) : msg;
     },
     ["message"]: message,
     ["type"]: type,
@@ -4638,11 +5295,11 @@ function createDevToolsHook(hook) {
 function fallbackWithSimple(ctx, fallback, start) {
   return [...new Set([
     start,
-    ...isArray(fallback) ? fallback : isObject(fallback) ? Object.keys(fallback) : isString(fallback) ? [fallback] : [start]
+    ...isArray(fallback) ? fallback : isObject(fallback) ? Object.keys(fallback) : isString$1(fallback) ? [fallback] : [start]
   ])];
 }
 function fallbackWithLocaleChain(ctx, fallback, start) {
-  const startLocale = isString(start) ? start : DEFAULT_LOCALE;
+  const startLocale = isString$1(start) ? start : DEFAULT_LOCALE;
   const context = ctx;
   if (!context.__localeChainCache) {
     context.__localeChainCache = new Map();
@@ -4655,7 +5312,7 @@ function fallbackWithLocaleChain(ctx, fallback, start) {
       block = appendBlockToChain(chain, block, fallback);
     }
     const defaults = isArray(fallback) || !isPlainObject(fallback) ? fallback : fallback["default"] ? fallback["default"] : null;
-    block = isString(defaults) ? [defaults] : defaults;
+    block = isString$1(defaults) ? [defaults] : defaults;
     if (isArray(block)) {
       appendBlockToChain(chain, block, false);
     }
@@ -4667,7 +5324,7 @@ function appendBlockToChain(chain, block, blocks) {
   let follow = true;
   for (let i = 0; i < block.length && isBoolean(follow); i++) {
     const locale = block[i];
-    if (isString(locale)) {
+    if (isString$1(locale)) {
       follow = appendLocaleToChain(chain, block[i], blocks);
     }
   }
@@ -4704,9 +5361,9 @@ const DEFAULT_LOCALE = "en-US";
 const MISSING_RESOLVE_VALUE = "";
 function getDefaultLinkedModifiers() {
   return {
-    upper: (val) => isString(val) ? val.toUpperCase() : val,
-    lower: (val) => isString(val) ? val.toLowerCase() : val,
-    capitalize: (val) => isString(val) ? `${val.charAt(0).toLocaleUpperCase()}${val.substr(1)}` : val
+    upper: (val) => isString$1(val) ? val.toUpperCase() : val,
+    lower: (val) => isString$1(val) ? val.toLowerCase() : val,
+    capitalize: (val) => isString$1(val) ? `${val.charAt(0).toLocaleUpperCase()}${val.substr(1)}` : val
   };
 }
 let _compiler;
@@ -4725,9 +5382,9 @@ const setAdditionalMeta = (meta) => {
 const getAdditionalMeta = () => _additionalMeta;
 let _cid = 0;
 function createCoreContext(options = {}) {
-  const version = isString(options.version) ? options.version : VERSION$1;
-  const locale = isString(options.locale) ? options.locale : DEFAULT_LOCALE;
-  const fallbackLocale = isArray(options.fallbackLocale) || isPlainObject(options.fallbackLocale) || isString(options.fallbackLocale) || options.fallbackLocale === false ? options.fallbackLocale : locale;
+  const version = isString$1(options.version) ? options.version : VERSION$1;
+  const locale = isString$1(options.locale) ? options.locale : DEFAULT_LOCALE;
+  const fallbackLocale = isArray(options.fallbackLocale) || isPlainObject(options.fallbackLocale) || isString$1(options.fallbackLocale) || options.fallbackLocale === false ? options.fallbackLocale : locale;
   const messages2 = isPlainObject(options.messages) ? options.messages : { [locale]: {} };
   const datetimeFormats = isPlainObject(options.datetimeFormats) ? options.datetimeFormats : { [locale]: {} };
   const numberFormats = isPlainObject(options.numberFormats) ? options.numberFormats : { [locale]: {} };
@@ -4789,7 +5446,7 @@ function handleMissing(context, key, locale, missingWarn, type) {
   const { missing, onWarn } = context;
   if (missing !== null) {
     const ret = missing(context, locale, key, type);
-    return isString(ret) ? ret : key;
+    return isString$1(ret) ? ret : key;
   } else {
     return key;
   }
@@ -4819,9 +5476,9 @@ function translate(context, ...args) {
   const fallbackWarn = isBoolean(options.fallbackWarn) ? options.fallbackWarn : context.fallbackWarn;
   const escapeParameter = isBoolean(options.escapeParameter) ? options.escapeParameter : context.escapeParameter;
   const resolvedMessage = !!options.resolvedMessage;
-  const defaultMsgOrKey = isString(options.default) || isBoolean(options.default) ? !isBoolean(options.default) ? options.default : key : fallbackFormat ? !messageCompiler ? () => key : key : "";
+  const defaultMsgOrKey = isString$1(options.default) || isBoolean(options.default) ? !isBoolean(options.default) ? options.default : key : fallbackFormat ? !messageCompiler ? () => key : key : "";
   const enableDefaultMsg = fallbackFormat || defaultMsgOrKey !== "";
-  const locale = isString(options.locale) ? options.locale : context.locale;
+  const locale = isString$1(options.locale) ? options.locale : context.locale;
   escapeParameter && escapeParams(options);
   let [formatScope, targetLocale, message] = !resolvedMessage ? resolveMessageFormat(context, key, locale, fallbackLocale, fallbackWarn, missingWarn) : [
     key,
@@ -4830,13 +5487,13 @@ function translate(context, ...args) {
   ];
   let format = formatScope;
   let cacheBaseKey = key;
-  if (!resolvedMessage && !(isString(format) || isMessageFunction(format))) {
+  if (!resolvedMessage && !(isString$1(format) || isMessageFunction(format))) {
     if (enableDefaultMsg) {
       format = defaultMsgOrKey;
       cacheBaseKey = format;
     }
   }
-  if (!resolvedMessage && (!(isString(format) || isMessageFunction(format)) || !isString(targetLocale))) {
+  if (!resolvedMessage && (!(isString$1(format) || isMessageFunction(format)) || !isString$1(targetLocale))) {
     return unresolving ? NOT_REOSLVED : key;
   }
   let occurred = false;
@@ -4854,9 +5511,9 @@ function translate(context, ...args) {
   if (__INTLIFY_PROD_DEVTOOLS__) {
     const payloads = {
       timestamp: Date.now(),
-      key: isString(key) ? key : isMessageFunction(format) ? format.key : "",
+      key: isString$1(key) ? key : isMessageFunction(format) ? format.key : "",
       locale: targetLocale || (isMessageFunction(format) ? format.locale : ""),
-      format: isString(format) ? format : isMessageFunction(format) ? format.source : "",
+      format: isString$1(format) ? format : isMessageFunction(format) ? format.source : "",
       message: ret
     };
     payloads.meta = assign({}, context.__meta, getAdditionalMeta() || {});
@@ -4866,10 +5523,10 @@ function translate(context, ...args) {
 }
 function escapeParams(options) {
   if (isArray(options.list)) {
-    options.list = options.list.map((item) => isString(item) ? escapeHtml(item) : item);
+    options.list = options.list.map((item) => isString$1(item) ? escapeHtml(item) : item);
   } else if (isObject(options.named)) {
     Object.keys(options.named).forEach((key) => {
-      if (isString(options.named[key])) {
+      if (isString$1(options.named[key])) {
         options.named[key] = escapeHtml(options.named[key]);
       }
     });
@@ -4888,7 +5545,7 @@ function resolveMessageFormat(context, key, locale, fallbackLocale, fallbackWarn
     if ((format = resolveValue2(message, key)) === null) {
       format = message[key];
     }
-    if (isString(format) || isFunction(format))
+    if (isString$1(format) || isFunction(format))
       break;
     const missingRet = handleMissing(context, key, targetLocale, missingWarn, type);
     if (missingRet !== key) {
@@ -4918,13 +5575,13 @@ function evaluateMessage(context, msg, msgCtx) {
 function parseTranslateArgs(...args) {
   const [arg1, arg2, arg3] = args;
   const options = {};
-  if (!isString(arg1) && !isNumber(arg1) && !isMessageFunction(arg1)) {
+  if (!isString$1(arg1) && !isNumber(arg1) && !isMessageFunction(arg1)) {
     throw createCoreError(CoreErrorCodes.INVALID_ARGUMENT);
   }
   const key = isNumber(arg1) ? String(arg1) : isMessageFunction(arg1) ? arg1 : arg1;
   if (isNumber(arg2)) {
     options.plural = arg2;
-  } else if (isString(arg2)) {
+  } else if (isString$1(arg2)) {
     options.default = arg2;
   } else if (isPlainObject(arg2) && !isEmptyObject(arg2)) {
     options.named = arg2;
@@ -4933,7 +5590,7 @@ function parseTranslateArgs(...args) {
   }
   if (isNumber(arg3)) {
     options.plural = arg3;
-  } else if (isString(arg3)) {
+  } else if (isString$1(arg3)) {
     options.default = arg3;
   } else if (isPlainObject(arg3)) {
     assign(options, arg3);
@@ -4956,7 +5613,7 @@ function getMessageContextOptions(context, locale, message, options) {
   const { modifiers, pluralRules, messageResolver: resolveValue2 } = context;
   const resolveMessage = (key) => {
     const val = resolveValue2(message, key);
-    if (isString(val)) {
+    if (isString$1(val)) {
       let occurred = false;
       const errorDetector = () => {
         occurred = true;
@@ -4996,9 +5653,9 @@ function datetime(context, ...args) {
   const missingWarn = isBoolean(options.missingWarn) ? options.missingWarn : context.missingWarn;
   isBoolean(options.fallbackWarn) ? options.fallbackWarn : context.fallbackWarn;
   const part = !!options.part;
-  const locale = isString(options.locale) ? options.locale : context.locale;
+  const locale = isString$1(options.locale) ? options.locale : context.locale;
   const locales = localeFallbacker(context, fallbackLocale, locale);
-  if (!isString(key) || key === "") {
+  if (!isString$1(key) || key === "") {
     return new Intl.DateTimeFormat(locale).format(value);
   }
   let datetimeFormat = {};
@@ -5013,7 +5670,7 @@ function datetime(context, ...args) {
       break;
     handleMissing(context, key, targetLocale, missingWarn, type);
   }
-  if (!isPlainObject(format) || !isString(targetLocale)) {
+  if (!isPlainObject(format) || !isString$1(targetLocale)) {
     return unresolving ? NOT_REOSLVED : key;
   }
   let id = `${targetLocale}__${key}`;
@@ -5032,7 +5689,7 @@ function parseDateTimeArgs(...args) {
   let options = {};
   let overrides = {};
   let value;
-  if (isString(arg1)) {
+  if (isString$1(arg1)) {
     const matches = arg1.match(/(\d{4}-\d{2}-\d{2})(T|\s)?(.*)/);
     if (!matches) {
       throw createCoreError(CoreErrorCodes.INVALID_ISO_DATE_ARGUMENT);
@@ -5054,12 +5711,12 @@ function parseDateTimeArgs(...args) {
   } else {
     throw createCoreError(CoreErrorCodes.INVALID_ARGUMENT);
   }
-  if (isString(arg2)) {
+  if (isString$1(arg2)) {
     options.key = arg2;
   } else if (isPlainObject(arg2)) {
     options = arg2;
   }
-  if (isString(arg3)) {
+  if (isString$1(arg3)) {
     options.locale = arg3;
   } else if (isPlainObject(arg3)) {
     overrides = arg3;
@@ -5086,9 +5743,9 @@ function number(context, ...args) {
   const missingWarn = isBoolean(options.missingWarn) ? options.missingWarn : context.missingWarn;
   isBoolean(options.fallbackWarn) ? options.fallbackWarn : context.fallbackWarn;
   const part = !!options.part;
-  const locale = isString(options.locale) ? options.locale : context.locale;
+  const locale = isString$1(options.locale) ? options.locale : context.locale;
   const locales = localeFallbacker(context, fallbackLocale, locale);
-  if (!isString(key) || key === "") {
+  if (!isString$1(key) || key === "") {
     return new Intl.NumberFormat(locale).format(value);
   }
   let numberFormat = {};
@@ -5103,7 +5760,7 @@ function number(context, ...args) {
       break;
     handleMissing(context, key, targetLocale, missingWarn, type);
   }
-  if (!isPlainObject(format) || !isString(targetLocale)) {
+  if (!isPlainObject(format) || !isString$1(targetLocale)) {
     return unresolving ? NOT_REOSLVED : key;
   }
   let id = `${targetLocale}__${key}`;
@@ -5125,12 +5782,12 @@ function parseNumberArgs(...args) {
     throw createCoreError(CoreErrorCodes.INVALID_ARGUMENT);
   }
   const value = arg1;
-  if (isString(arg2)) {
+  if (isString$1(arg2)) {
     options.key = arg2;
   } else if (isPlainObject(arg2)) {
     options = arg2;
   }
-  if (isString(arg3)) {
+  if (isString$1(arg3)) {
     options.locale = arg3;
   } else if (isPlainObject(arg3)) {
     overrides = arg3;
@@ -5236,7 +5893,7 @@ function getLocaleMessages(locale, options) {
           deepCopy(resource, ret);
         }
       } else {
-        isString(custom2) && deepCopy(JSON.parse(custom2), ret);
+        isString$1(custom2) && deepCopy(JSON.parse(custom2), ret);
       }
     });
   }
@@ -5319,8 +5976,8 @@ function createComposer(options = {}, VueI18nLegacy) {
   const { __root } = options;
   const _isGlobal = __root === void 0;
   let _inheritLocale = isBoolean(options.inheritLocale) ? options.inheritLocale : true;
-  const _locale = vue_cjs_prod.ref(__root && _inheritLocale ? __root.locale.value : isString(options.locale) ? options.locale : DEFAULT_LOCALE);
-  const _fallbackLocale = vue_cjs_prod.ref(__root && _inheritLocale ? __root.fallbackLocale.value : isString(options.fallbackLocale) || isArray(options.fallbackLocale) || isPlainObject(options.fallbackLocale) || options.fallbackLocale === false ? options.fallbackLocale : _locale.value);
+  const _locale = vue_cjs_prod.ref(__root && _inheritLocale ? __root.locale.value : isString$1(options.locale) ? options.locale : DEFAULT_LOCALE);
+  const _fallbackLocale = vue_cjs_prod.ref(__root && _inheritLocale ? __root.fallbackLocale.value : isString$1(options.fallbackLocale) || isArray(options.fallbackLocale) || isPlainObject(options.fallbackLocale) || options.fallbackLocale === false ? options.fallbackLocale : _locale.value);
   const _messages = vue_cjs_prod.ref(getLocaleMessages(_locale.value, options));
   const _datetimeFormats = vue_cjs_prod.ref(isPlainObject(options.datetimeFormats) ? options.datetimeFormats : { [_locale.value]: {} });
   const _numberFormats = vue_cjs_prod.ref(isPlainObject(options.numberFormats) ? options.numberFormats : { [_locale.value]: {} });
@@ -5432,7 +6089,7 @@ function createComposer(options = {}, VueI18nLegacy) {
     }
   }
   function t(...args) {
-    return wrapWithDeps((context) => Reflect.apply(translate, null, [context, ...args]), () => parseTranslateArgs(...args), "translate", (root) => Reflect.apply(root.t, root, [...args]), (key) => key, (val) => isString(val));
+    return wrapWithDeps((context) => Reflect.apply(translate, null, [context, ...args]), () => parseTranslateArgs(...args), "translate", (root) => Reflect.apply(root.t, root, [...args]), (key) => key, (val) => isString$1(val));
   }
   function rt(...args) {
     const [arg1, arg2, arg3] = args;
@@ -5442,13 +6099,13 @@ function createComposer(options = {}, VueI18nLegacy) {
     return t(...[arg1, arg2, assign({ resolvedMessage: true }, arg3 || {})]);
   }
   function d(...args) {
-    return wrapWithDeps((context) => Reflect.apply(datetime, null, [context, ...args]), () => parseDateTimeArgs(...args), "datetime format", (root) => Reflect.apply(root.d, root, [...args]), () => MISSING_RESOLVE_VALUE, (val) => isString(val));
+    return wrapWithDeps((context) => Reflect.apply(datetime, null, [context, ...args]), () => parseDateTimeArgs(...args), "datetime format", (root) => Reflect.apply(root.d, root, [...args]), () => MISSING_RESOLVE_VALUE, (val) => isString$1(val));
   }
   function n(...args) {
-    return wrapWithDeps((context) => Reflect.apply(number, null, [context, ...args]), () => parseNumberArgs(...args), "number format", (root) => Reflect.apply(root.n, root, [...args]), () => MISSING_RESOLVE_VALUE, (val) => isString(val));
+    return wrapWithDeps((context) => Reflect.apply(number, null, [context, ...args]), () => parseNumberArgs(...args), "number format", (root) => Reflect.apply(root.n, root, [...args]), () => MISSING_RESOLVE_VALUE, (val) => isString$1(val));
   }
   function normalize(values) {
-    return values.map((val) => isString(val) ? createTextNode(val) : val);
+    return values.map((val) => isString$1(val) ? createTextNode(val) : val);
   }
   const interpolate = (val) => val;
   const processor = {
@@ -5470,17 +6127,17 @@ function createComposer(options = {}, VueI18nLegacy) {
     }, () => parseTranslateArgs(...args), "translate", (root) => root[TransrateVNodeSymbol](...args), (key) => [createTextNode(key)], (val) => isArray(val));
   }
   function numberParts(...args) {
-    return wrapWithDeps((context) => Reflect.apply(number, null, [context, ...args]), () => parseNumberArgs(...args), "number format", (root) => root[NumberPartsSymbol](...args), () => [], (val) => isString(val) || isArray(val));
+    return wrapWithDeps((context) => Reflect.apply(number, null, [context, ...args]), () => parseNumberArgs(...args), "number format", (root) => root[NumberPartsSymbol](...args), () => [], (val) => isString$1(val) || isArray(val));
   }
   function datetimeParts(...args) {
-    return wrapWithDeps((context) => Reflect.apply(datetime, null, [context, ...args]), () => parseDateTimeArgs(...args), "datetime format", (root) => root[DatetimePartsSymbol](...args), () => [], (val) => isString(val) || isArray(val));
+    return wrapWithDeps((context) => Reflect.apply(datetime, null, [context, ...args]), () => parseDateTimeArgs(...args), "datetime format", (root) => root[DatetimePartsSymbol](...args), () => [], (val) => isString$1(val) || isArray(val));
   }
   function setPluralRules(rules) {
     _pluralRules = rules;
     _context.pluralRules = _pluralRules;
   }
   function te(key, locale2) {
-    const targetLocale = isString(locale2) ? locale2 : _locale.value;
+    const targetLocale = isString$1(locale2) ? locale2 : _locale.value;
     const message = getLocaleMessage(targetLocale);
     return _context.messageResolver(message, key) !== null;
   }
@@ -5657,8 +6314,8 @@ function createComposer(options = {}, VueI18nLegacy) {
   return composer;
 }
 function convertComposerOptions(options) {
-  const locale = isString(options.locale) ? options.locale : DEFAULT_LOCALE;
-  const fallbackLocale = isString(options.fallbackLocale) || isArray(options.fallbackLocale) || isPlainObject(options.fallbackLocale) || options.fallbackLocale === false ? options.fallbackLocale : locale;
+  const locale = isString$1(options.locale) ? options.locale : DEFAULT_LOCALE;
+  const fallbackLocale = isString$1(options.fallbackLocale) || isArray(options.fallbackLocale) || isPlainObject(options.fallbackLocale) || options.fallbackLocale === false ? options.fallbackLocale : locale;
   const missing = isFunction(options.missing) ? options.missing : void 0;
   const missingWarn = isBoolean(options.silentTranslationWarn) || isRegExp(options.silentTranslationWarn) ? !options.silentTranslationWarn : true;
   const fallbackWarn = isBoolean(options.silentFallbackWarn) || isRegExp(options.silentFallbackWarn) ? !options.silentFallbackWarn : true;
@@ -5667,7 +6324,7 @@ function convertComposerOptions(options) {
   const modifiers = isPlainObject(options.modifiers) ? options.modifiers : {};
   const pluralizationRules = options.pluralizationRules;
   const postTranslation = isFunction(options.postTranslation) ? options.postTranslation : void 0;
-  const warnHtmlMessage = isString(options.warnHtmlInMessage) ? options.warnHtmlInMessage !== "off" : true;
+  const warnHtmlMessage = isString$1(options.warnHtmlInMessage) ? options.warnHtmlInMessage !== "off" : true;
   const escapeParameter = !!options.escapeParameterHtml;
   const inheritLocale = isBoolean(options.sync) ? options.sync : true;
   let messages2 = options.messages;
@@ -5811,11 +6468,11 @@ function createVueI18n(options = {}, VueI18nLegacy) {
         const options2 = {};
         let list = null;
         let named = null;
-        if (!isString(arg1)) {
+        if (!isString$1(arg1)) {
           throw createI18nError(I18nErrorCodes.INVALID_ARGUMENT);
         }
         const key = arg1;
-        if (isString(arg2)) {
+        if (isString$1(arg2)) {
           options2.locale = arg2;
         } else if (isArray(arg2)) {
           list = arg2;
@@ -5841,11 +6498,11 @@ function createVueI18n(options = {}, VueI18nLegacy) {
         const options2 = { plural: 1 };
         let list = null;
         let named = null;
-        if (!isString(arg1)) {
+        if (!isString$1(arg1)) {
           throw createI18nError(I18nErrorCodes.INVALID_ARGUMENT);
         }
         const key = arg1;
-        if (isString(arg2)) {
+        if (isString$1(arg2)) {
           options2.locale = arg2;
         } else if (isNumber(arg2)) {
           options2.plural = arg2;
@@ -5854,7 +6511,7 @@ function createVueI18n(options = {}, VueI18nLegacy) {
         } else if (isPlainObject(arg2)) {
           named = arg2;
         }
-        if (isString(arg3)) {
+        if (isString$1(arg3)) {
           options2.locale = arg3;
         } else if (isArray(arg3)) {
           list = arg3;
@@ -5976,12 +6633,12 @@ const Translation = {
         options.locale = props.locale;
       }
       if (props.plural !== void 0) {
-        options.plural = isString(props.plural) ? +props.plural : props.plural;
+        options.plural = isString$1(props.plural) ? +props.plural : props.plural;
       }
       const arg = getInterpolateArg(context, keys);
       const children = i18n[TransrateVNodeSymbol](props.keypath, arg, options);
       const assignedAttrs = assign({}, attrs);
-      const tag = isString(props.tag) || isObject(props.tag) ? props.tag : getFragmentableTag();
+      const tag = isString$1(props.tag) || isObject(props.tag) ? props.tag : getFragmentableTag();
       return vue_cjs_prod.h(tag, assignedAttrs, children);
     };
   }
@@ -5994,10 +6651,10 @@ function renderFormatter(props, context, slotKeys, partFormatter) {
     if (props.locale) {
       options.locale = props.locale;
     }
-    if (isString(props.format)) {
+    if (isString$1(props.format)) {
       options.key = props.format;
     } else if (isObject(props.format)) {
-      if (isString(props.format.key)) {
+      if (isString$1(props.format.key)) {
         options.key = props.format.key;
       }
       overrides = Object.keys(props.format).reduce((options2, prop) => {
@@ -6011,11 +6668,11 @@ function renderFormatter(props, context, slotKeys, partFormatter) {
         const slot = slots[part.type];
         return slot ? slot({ [part.type]: part.value, index: index2, parts }) : [part.value];
       });
-    } else if (isString(parts)) {
+    } else if (isString$1(parts)) {
       children = [parts];
     }
     const assignedAttrs = assign({}, attrs);
-    const tag = isString(props.tag) || isObject(props.tag) ? props.tag : getFragmentableTag();
+    const tag = isString$1(props.tag) || isObject(props.tag) ? props.tag : getFragmentableTag();
     return vue_cjs_prod.h(tag, assignedAttrs, children);
   };
 }
@@ -6116,7 +6773,7 @@ function vTDirective(i18n) {
   };
 }
 function parseValue(value) {
-  if (isString(value)) {
+  if (isString$1(value)) {
     return { path: value };
   } else if (isPlainObject(value)) {
     if (!("path" in value)) {
@@ -6131,7 +6788,7 @@ function makeParams(value) {
   const { path, locale, args, choice, plural } = value;
   const options = {};
   const named = args || {};
-  if (isString(locale)) {
+  if (isString$1(locale)) {
     options.locale = locale;
   }
   if (isNumber(choice)) {
@@ -6938,6 +7595,149 @@ const about$1 = /* @__PURE__ */ Object.freeze({
   [Symbol.toStringTag]: "Module",
   "default": about
 });
+function tryOnScopeDispose(fn) {
+  if (vue_cjs_prod.getCurrentScope()) {
+    vue_cjs_prod.onScopeDispose(fn);
+    return true;
+  }
+  return false;
+}
+const isString = (val) => typeof val === "string";
+const noop = () => {
+};
+function tryOnMounted(fn, sync = true) {
+  if (vue_cjs_prod.getCurrentInstance())
+    vue_cjs_prod.onMounted(fn);
+  else if (sync)
+    fn();
+  else
+    vue_cjs_prod.nextTick(fn);
+}
+const defaultWindow = void 0;
+function useEventListener(...args) {
+  let target;
+  let event;
+  let listener;
+  let options;
+  if (isString(args[0])) {
+    [event, listener, options] = args;
+    target = defaultWindow;
+  } else {
+    [target, event, listener, options] = args;
+  }
+  if (!target)
+    return noop;
+  let cleanup = noop;
+  const stopWatch = vue_cjs_prod.watch(() => vue_cjs_prod.unref(target), (el) => {
+    cleanup();
+    if (!el)
+      return;
+    el.addEventListener(event, listener, options);
+    cleanup = () => {
+      el.removeEventListener(event, listener, options);
+      cleanup = noop;
+    };
+  }, { immediate: true, flush: "post" });
+  const stop2 = () => {
+    stopWatch();
+    cleanup();
+  };
+  tryOnScopeDispose(stop2);
+  return stop2;
+}
+function useMediaQuery(query, options = {}) {
+  const { window: window2 = defaultWindow } = options;
+  let mediaQuery;
+  const matches = vue_cjs_prod.ref(false);
+  const update = () => {
+    if (!window2)
+      return;
+    if (!mediaQuery)
+      mediaQuery = window2.matchMedia(query);
+    matches.value = mediaQuery.matches;
+  };
+  tryOnMounted(() => {
+    update();
+    if (!mediaQuery)
+      return;
+    if ("addEventListener" in mediaQuery)
+      mediaQuery.addEventListener("change", update);
+    else
+      mediaQuery.addListener(update);
+    tryOnScopeDispose(() => {
+      if ("removeEventListener" in update)
+        mediaQuery.removeEventListener("change", update);
+      else
+        mediaQuery.removeListener(update);
+    });
+  });
+  return matches;
+}
+function usePreferredDark(options) {
+  return useMediaQuery("(prefers-color-scheme: dark)", options);
+}
+function useMouse(options = {}) {
+  const {
+    type = "page",
+    touch = true,
+    resetOnTouchEnds = false,
+    initialValue = { x: 0, y: 0 },
+    window: window2 = defaultWindow
+  } = options;
+  const x = vue_cjs_prod.ref(initialValue.x);
+  const y = vue_cjs_prod.ref(initialValue.y);
+  const sourceType = vue_cjs_prod.ref(null);
+  const mouseHandler = (event) => {
+    if (type === "page") {
+      x.value = event.pageX;
+      y.value = event.pageY;
+    } else if (type === "client") {
+      x.value = event.clientX;
+      y.value = event.clientY;
+    }
+    sourceType.value = "mouse";
+  };
+  const reset = () => {
+    x.value = initialValue.x;
+    y.value = initialValue.y;
+  };
+  const touchHandler = (event) => {
+    if (event.touches.length > 0) {
+      const touch2 = event.touches[0];
+      if (type === "page") {
+        x.value = touch2.pageX;
+        y.value = touch2.pageY;
+      } else if (type === "client") {
+        x.value = touch2.clientX;
+        y.value = touch2.clientY;
+      }
+      sourceType.value = "touch";
+    }
+  };
+  if (window2) {
+    useEventListener(window2, "mousemove", mouseHandler, { passive: true });
+    useEventListener(window2, "dragover", mouseHandler, { passive: true });
+    if (touch) {
+      useEventListener(window2, "touchstart", touchHandler, { passive: true });
+      useEventListener(window2, "touchmove", touchHandler, { passive: true });
+      if (resetOnTouchEnds)
+        useEventListener(window2, "touchend", reset, { passive: true });
+    }
+  }
+  return {
+    x,
+    y,
+    sourceType
+  };
+}
+var SwipeDirection;
+(function(SwipeDirection2) {
+  SwipeDirection2["UP"] = "UP";
+  SwipeDirection2["RIGHT"] = "RIGHT";
+  SwipeDirection2["DOWN"] = "DOWN";
+  SwipeDirection2["LEFT"] = "LEFT";
+  SwipeDirection2["NONE"] = "NONE";
+})(SwipeDirection || (SwipeDirection = {}));
 const _sfc_main$u = {
   __ssrInlineRender: true,
   props: ["modelValue", "type"],
@@ -6983,18 +7783,43 @@ const Input = /* @__PURE__ */ Object.freeze({
 const _sfc_main$t = {
   __ssrInlineRender: true,
   setup(__props) {
-    let lang = vue_cjs_prod.ref("en");
-    console.log("sad");
-    vue_cjs_prod.ref({ username: "", password: "" });
+    let isLoading = vue_cjs_prod.ref(false);
+    let fullPage = vue_cjs_prod.ref(true);
+    let onCancel = () => {
+      console.log("User cancelled the loader");
+    };
+    let timerInterval;
+    Swal.fire({
+      title: "Game is starting!",
+      html: "The game will start in <b></b> milliseconds.",
+      timer: 2e3,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const b = Swal.getHtmlContainer().querySelector("b");
+        timerInterval = setInterval(() => {
+          b.textContent = Swal.getTimerLeft();
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      }
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log("I was closed by the timer");
+      }
+    });
+    const { x, y } = useMouse();
+    const isDark = usePreferredDark();
     return (_ctx, _push, _parent, _attrs) => {
       const _component_AtomsInput = _sfc_main$u;
       const _component_NuxtLayout = vue_cjs_prod.resolveComponent("NuxtLayout");
       const _component_NuxtLink = vue_cjs_prod.resolveComponent("NuxtLink");
-      _push(`<div${serverRenderer.exports.ssrRenderAttrs(_attrs)}>${serverRenderer.exports.ssrInterpolate(_ctx.$t("hello"))} `);
+      _push(`<html${serverRenderer.exports.ssrRenderAttrs(vue_cjs_prod.mergeProps({ class: "dark" }, _attrs))}><div>${serverRenderer.exports.ssrInterpolate(_ctx.$t("hello"))} `);
       _push(serverRenderer.exports.ssrRenderComponent(_component_AtomsInput, {
         type: "text",
-        modelValue: vue_cjs_prod.unref(lang),
-        "onUpdate:modelValue": ($event) => vue_cjs_prod.isRef(lang) ? lang.value = $event : lang = $event
+        modelValue: _ctx.lang,
+        "onUpdate:modelValue": ($event) => _ctx.lang = $event
       }, null, _parent));
       _push(`<button>Change Language</button>`);
       _push(serverRenderer.exports.ssrRenderComponent(_component_NuxtLayout, { name: "custom" }, {
@@ -7034,7 +7859,19 @@ const _sfc_main$t = {
         }),
         _: 1
       }, _parent));
-      _push(`</div>`);
+      _push(`</div><div class="vld-parent h-48">`);
+      _push(serverRenderer.exports.ssrRenderComponent(vue_cjs_prod.unref(Loading), {
+        active: vue_cjs_prod.unref(isLoading),
+        "onUpdate:active": ($event) => vue_cjs_prod.isRef(isLoading) ? isLoading.value = $event : isLoading = $event,
+        "can-cancel": true,
+        "on-cancel": vue_cjs_prod.unref(onCancel),
+        "is-full-page": vue_cjs_prod.unref(fullPage),
+        loader: "bars",
+        height: "200",
+        width: "100",
+        "background-color": "#8B949E"
+      }, null, _parent));
+      _push(`<label><input type="checkbox"${serverRenderer.exports.ssrIncludeBooleanAttr(Array.isArray(vue_cjs_prod.unref(fullPage)) ? serverRenderer.exports.ssrLooseContain(vue_cjs_prod.unref(fullPage), null) : vue_cjs_prod.unref(fullPage)) ? " checked" : ""}>Full page? </label><button class="p-2 bg-green-100 rounded-md hover:bg-green-300">fetch Data</button></div><button class="p-2 bg-blue-100 rounded-md hover:bg-blue-300">Korek Telecom</button><br><br><br><button class="p-2 bg-red-200 rounded-lg">Delete it</button><div>pos: ${serverRenderer.exports.ssrInterpolate(vue_cjs_prod.unref(x))}, ${serverRenderer.exports.ssrInterpolate(vue_cjs_prod.unref(y))}</div><div>${serverRenderer.exports.ssrInterpolate(vue_cjs_prod.unref(isDark))}</div></html>`);
     };
   }
 };

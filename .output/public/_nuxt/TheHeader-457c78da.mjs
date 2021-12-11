@@ -1,0 +1,1 @@
+import{_ as s,c as n,t as a,o as c}from"./entry-020a2e38.mjs";const _=()=>"Header",p={setup(r,{expose:o}){o();const e={foo:_()};return Object.defineProperty(e,"__isScriptSetup",{enumerable:!1,value:!0}),e}},u={style:{color:"rgb(253, 5, 5)"}};function f(r,o,t,e,i,d){return c(),n("div",u,a(e.foo),1)}var m=s(p,[["render",f]]);export{m as default};

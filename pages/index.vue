@@ -1,4 +1,5 @@
 <template>
+<html class="dark">
   <div>
     {{ $t('hello') }}
     <AtomsInput type="text" v-model:modelValue="lang"></AtomsInput>
@@ -33,13 +34,26 @@
   <!-- Sweetalert example-->
   <button
     @click.prevent="showLogo"
-    class="p-2 bg-blue-100 rounded-md hover:bg-blue-300"
+    class="p-2 bg-blue-100 rounded-md hover:bg-blue-300 dark:bg-yellow-300"
   >Korek Telecom</button>
 
   <br />
   <br />
   <br />
   <button @click.prevent="deleteModal" class="p-2 bg-red-200 rounded-lg">Delete it</button>
+
+  <!-- Vueuse example  -->
+  <div>pos: {{ x }}, {{ y }}</div>
+  
+
+    <div>
+    <button type="button" @click="focused = true">Click me to focus input below</button>
+    <input ref="inputElement" type="text">
+{{focused}} 
+  </div>
+
+
+</html>
 </template>
 <script setup >
 
@@ -48,6 +62,10 @@ import 'vue-loading-overlay/dist/vue-loading.css';
 // import Swal from 'sweetalert2'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
+
+import { useFocus, usePreferredDark } from '@vueuse/core'
+
+
 
 let isLoading = ref(false);
 let fullPage = ref(true);
@@ -108,8 +126,6 @@ let showLogo = () => {
   //   showCloseButton: true
   // })
 }
-
-
 let deleteModal = () => {
   Swal.fire({
     title: 'Are you sure?',
@@ -129,5 +145,13 @@ let deleteModal = () => {
     }
   })
 }
+
+// Vue use
+const { x, y } = useMouse()
+const isDark = usePreferredDark()
+
+const inputElement = ref(null)
+const { focused } = useFocus({ target: inputElement })
+
 
 </script>

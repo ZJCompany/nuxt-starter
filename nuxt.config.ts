@@ -5,7 +5,7 @@ import messages from './locales'
 export default defineNuxtConfig({
   css: ["~/assets/css/tailwind.css"],
   // plugins: ["~/plugins/vee-validate"],
-  buildModules: ['@intlify/nuxt3'],
+  buildModules: ['@intlify/nuxt3', '@vueuse/nuxt'],
   intlify: {
     vueI18n: {
       // You can setting same `createI18n` options here !
