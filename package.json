@@ -18,6 +18,7 @@
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/line-clamp": "^0.2.2",
     "@tailwindcss/typography": "^0.4.1",
-    "vee-validate": "^4.5.6"
+    "vee-validate": "^4.5.6",
+    "vue-loading-overlay": "^4.0.4"
   }
 }

@@ -8,21 +8,40 @@
       <template #header>Some header template content.</template>
     </NuxtLayout>
   </div>
+
+
+<!-- Loading example -->
+  <div class="vld-parent h-60">
+    <loading
+      v-model:active="isLoading"
+      :can-cancel="true"
+      :on-cancel="onCancel"
+      :is-full-page="fullPage"
+      loader="bars"
+      height=200
+      width=100
+      background-color ="#8B949E"
+    />
+    <label>
+      <input type="checkbox" v-model="fullPage" />Full page?
+    </label>
+    <button @click.prevent="doAjax" class="p-2 bg-green-100 rounded-md hover:bg-green-300">fetch Data</button>
+  </div>  
 </template>
 <script setup>
-let lang = ref('en');
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
 
-console.log("sad");
-// import { ref } from 'vue'
-// import FormSection from '~~/components/atoms/FormSection.vue';
-// function add() {
-//   console.log('work');
-// }
-// let text = ref('')
+let isLoading = ref(false);
+let fullPage = ref(true);
+let doAjax = () => {
+  isLoading.value = true;
 
-let formData = ref({ username: '', password: '' })
+  setTimeout(() => isLoading.value = false, 5000)
+}
 
-// function changeText() {
-//   text.value = "jihadandzeyad";
-// 
+let onCancel = () => {
+  console.log("User cancelled the loader");
+}
+
 </script>
