@@ -10344,4 +10344,4 @@ serverRenderer_cjs_prod.ssrRenderVNode = renderVNode;
   serverRenderer.exports = serverRenderer_cjs_prod;
 }
 
-export { require$$0 as r, serverRenderer as s, vue_cjs_prod as v };
+export { commonjsGlobal as c, getDefaultExportFromCjs as g, require$$0 as r, serverRenderer as s, vue_cjs_prod as v };

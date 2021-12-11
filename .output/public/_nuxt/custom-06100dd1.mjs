@@ -1,1 +1,0 @@
-import{_ as t,c as o,r as s,x as a,o as r}from"./entry-4a36a4e1.mjs";const c={layout:"custom"},n=a(" Some shared layout content: ");function l(e,d,u,_,m,p){return r(),o("div",null,[n,s(e.$slots,"default")])}var i=t(c,[["render",l]]);export{i as default};

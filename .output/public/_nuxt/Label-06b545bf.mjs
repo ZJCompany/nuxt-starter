@@ -1,1 +1,0 @@
-import{_ as a,d as o,c as s,t as n,r,o as t}from"./entry-4a36a4e1.mjs";const l=o({props:["value"]}),c={class:"block font-medium text-sm text-gray-700"},p={key:0},d={key:1};function _(e,i,f,m,u,k){return t(),s("label",c,[e.value?(t(),s("span",p,n(e.value),1)):(t(),s("span",d,[r(e.$slots,"default")]))])}var $=a(l,[["render",_]]);export{$ as default};
