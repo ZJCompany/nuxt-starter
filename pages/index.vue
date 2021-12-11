@@ -59,7 +59,6 @@
 
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
-// import Swal from 'sweetalert2'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
 
